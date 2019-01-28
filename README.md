@@ -19,7 +19,9 @@ a deep study of this simple expression will help you understand how types, expre
 
 ---
 
-## [ast visualizer](https://astexplorer.net/) 
+## ast visualizer (abstract syntax tree)
+
+[(a + b) < (a - b)](https://astexplorer.net/#/gist/e22d33e10f7c29268d5074803e35ced5/dc62a6c670ad23a226b4a7ae1ac017c28199b58e) 
 
 * select to hide everything just above the collapsible tree, makes it readable
 * this tool will be very helpful figuring out order of operations when expanding expressions
