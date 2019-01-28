@@ -1,12 +1,35 @@
-## (a + b) < (a - b)
+# (a + b) < (a - b)
 
-[parsons & evaluation table](https://colevanderswands.github.io/an-expression-study)
+a deep study of this simple expression will help you understand how types, expressions & implicit coercion work in JS.
 
-learning objectives:
+###Index
+* [learning objectives](#learning-objectives)
+* [parsons & evaluation table](https://colevanderswands.github.io/an-expression-study)
+* [ast visualizer](#ast-visualizer)
+* [console exercises](#console-exercises)
+
+---
+
+## learning objectives
+
 * implicit type conversion: strings & numbers, + & -
 * programming is computational steps: value -> operation -> value ...
 * breaking down & studying JS expressions
+* ast visualizer for help parsing long/complex expressions
 
+---
+
+## [ast visualizer](https://astexplorer.net/) 
+
+* select to hide everything just above the collapsible tree, makes it readable
+* this tool will be very helpful figuring out order of operations when expanding expressions
+    * the deepest operators are executed first, then their parents, ...
+* using this for anything but just expressions will likely be more confusing than helpful
+* this tool doesn't check for syntax errors and doesn't run code, so keep it simple and just copy in the expression. no need for variable declarations
+
+---
+
+## Console Exercises
 
 the expression:
 ```js
