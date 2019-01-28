@@ -2,7 +2,7 @@
 
 a deep study of this simple expression will help you understand how types, expressions & implicit coercion work in JS.
 
-###Index
+### Index
 * [learning objectives](#learning-objectives)
 * [parsons & evaluation table](https://colevanderswands.github.io/an-expression-study)
 * [ast visualizer](#ast-visualizer)
