@@ -1,5 +1,8 @@
 function handler() {
 
+    var assert_here = document.getElementById("assert-here");
+    assert_here.style.backgroundColor = 'white';
+
     // read, clean & process user input
     var a_type = document.getElementById("a-type").value;
     var a_value = document.getElementById("a-value").value;
@@ -19,14 +22,14 @@ function handler() {
     /* (a + b) < (a - b) */                 var log = [];               
     
     var val_1 = a + b;                    log.push({op: 'a + b',
-                                                      value: val_1,
-                                                      type: typeof val_1});
+                                                      type: typeof val_1,
+                                                      value: val_1 });
     var val_2 = a - b;                    log.push({op:'a - b',
-                                                      value: val_2,
-                                                      type: typeof val_2});
+                                                      type: typeof val_2,
+                                                      value: val_2 });
     var val_3 = val_1 < val_2;            log.push({op:'val_1 < val_2',
-                                                      value: val_3,
-                                                      type: typeof val_3});
+                                                      type: typeof val_3,
+                                                      value: val_3});
     var actual = val_3; 
 
     var assertion = Object.is(expected, actual);
@@ -35,10 +38,12 @@ function handler() {
   // write response to user
     console.log({a:a,b:b});
     console.table(log);
+    console.log('expected: '+typeof expected +', '+ expected);
     console.assert(assertion, "try again");
 
-    if (!assertion) {
-        var assert_here = document.getElementById("assert-here");
+    if (assertion) {
+        assert_here.style.backgroundColor = 'green';
+    } else {
         assert_here.style.backgroundColor = 'red';
     };
 
