@@ -1,4 +1,4 @@
-function cast(type, value) {
+function cast(type, value, id) {
 
     if (type == "number" || type == "Number") {
         return Number(value);
@@ -14,10 +14,14 @@ function cast(type, value) {
             return true;
         } else if(value === 'false') {
             return false;
-        } else {
-            var assert_here = document.getElementById("assert-here");
-            assert_here.style.backgroundColor = 'blue';
-            throw new Error(value + ' is not boolean');
+        } else {   
+            try { 
+                var field = document.getElementById(id);
+                field.style.backgroundColor = 'yellow';
+                throw new Error(value + ' is not boolean');
+            } catch(err) {
+                throw new Error(value + ' is not boolean');
+            };
         };
     };
 

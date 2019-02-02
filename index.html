@@ -86,15 +86,16 @@
         <tr>
             <td>
                 Input:
-                <br>
+                <div id="a">
                  a: <input type="text" value="type" id="a-type">
                     <input type="text" value="value" id="a-value">
-                <br>
+                </div>
+                <div id="b">
                  b: <input type="text" value="type" id="b-type">
                     <input type="text" value="value" id="b-value">
+                </div>
                 <br>
-                <br>
-                <div id='assert-here'>
+                <div id='expected'>
                   Expected:
                   <br>
                   <input type="text" value="type" id="expected-type">
@@ -151,7 +152,7 @@
       <tr>  <!--  sf    -->
         <td>final value</td>
         <td><button type="button" onclick="clear_table()">clear table</button></td>
-        <td>
+        <td id='actual'>
           <input id="t-f" type="text" value=""> <br>
           <input id="v-f" type="text" value="">
         </td> 

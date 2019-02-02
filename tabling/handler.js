@@ -1,20 +1,32 @@
 function handler() {
+    // reset dom from last time
+    var a_value = document.getElementById("a-value");
+    a_value.style.backgroundColor = 'white';
 
-    var assert_here = document.getElementById("assert-here");
-    assert_here.style.backgroundColor = 'white';
+    var b_value = document.getElementById("b-value");
+    b_value.style.backgroundColor = 'white';
+
+    var expected_value = document.getElementById("expected-value");
+    expected_value.style.backgroundColor = 'white';
+
+    var expected_div = document.getElementById("expected");
+    expected_div.style.backgroundColor = 'white';
+
+    var actual_field = document.getElementById("actual");
+    actual_field.style.backgroundColor = 'white';
 
     // read, clean & process user input
     var a_type = document.getElementById("a-type").value;
     var a_value = document.getElementById("a-value").value;
-    var a = cast(a_type, a_value);
+    var a = cast(a_type, a_value, 'a-value');
     
     var b_type = document.getElementById("b-type").value;
     var b_value = document.getElementById("b-value").value;
-    var b = cast(b_type, b_value);
+    var b = cast(b_type, b_value, 'b-value');
 
     var expected_type = document.getElementById("expected-type").value;
     var expected_value = document.getElementById("expected-value").value;
-    var expected = cast(expected_type, expected_value);
+    var expected = cast(expected_type, expected_value, 'expected-value');
 
 
   // perform logic. (determine user rightness)
@@ -42,9 +54,11 @@ function handler() {
     console.assert(assertion, "try again");
 
     if (assertion) {
-        assert_here.style.backgroundColor = 'green';
+        expected_div.style.backgroundColor = 'green';
+        actual_field.style.backgroundColor = 'green';
     } else {
-        assert_here.style.backgroundColor = 'red';
+        expected_div.style.backgroundColor = 'red';
+        actual_field.style.backgroundColor = 'red';
     };
 
     var t_1 = document.getElementById("t-1");
