@@ -59,7 +59,8 @@ a: false, b: true     -->   ?
 a: false, b: false    -->   ?
 ```
 
-the expansion:
+the expansion:  
+(this works best in chrome or firefox)  
 ```js
 { const expected = ;
 
