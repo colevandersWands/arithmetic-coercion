@@ -5,22 +5,8 @@
 
   <title>arithmetic coercion</title>
   <meta name="description" content="+ - coercion">
-  <meta name="author" content="evan">
 
   <link rel="stylesheet" href="./style.css">
-
-  <!-- the scripts that make parsons work -->
-  <link href="./parsoning/parsons.css" rel="stylesheet" />
-  <link href="./parsoning/lib/prettify.css" rel="stylesheet" />
-  <script src="./parsoning/lib/prettify.js"></script>
-  <script src="./parsoning/include.js"></script>
-  <script src="./parsoning/lib/jquery.min.js"></script>
-  <script src="./parsoning/lib/jquery-ui.min.js"></script>
-  <script src="./parsoning/lib/jquery.ui.touch-punch.min.js"></script>
-  <script src="./parsoning/lib/underscore-min.js"></script>
-  <script src="./parsoning/lib/lis.js"></script>
-  <script src="./parsoning/parsons.js"></script>
-  <script src='./parsoning/index.js'></script>
 
   <!-- the scripts that make the table work -->
   <script src='./tabling/cast.js'></script>
@@ -31,27 +17,18 @@
 
 <body>
   <div class="navbar">
-    <a>(a</a>
+    <a>a</a>
     <a>+</a>
-    <a>b)</a>
-    <a>
-      <</a> <a>(a
-    </a>
+    <a>b</a>
+    <a>&#60;</a>
+    <a>a</a>
     <a>-</a>
-    <a>b)</a>
+    <a>b</a>
   </div>
 
   <br>
   <br>
-  <br>
-  <p>
-    ( inspect the page for logs, assertions & errors )
-  </p>
-  <a href='https://github.com/janke-learning/arithmetic-coercion'>back to repo</a> <br>
-  <a href='https://janke-learning.github.io/fosdem-2019/#/open-education'>back to slideshow</a>
-  <hr>
   <div class="main">
-    <p>(inspect for more info, chrome or firefox are best)</p>
     <table>
       <tr>
         <td>
@@ -81,7 +58,7 @@
         </td>
       </tr>
     </table>
-
+    <br>
     <table>
       <tr>
         <th>step</th>
@@ -127,7 +104,7 @@
       <tr>
         <!--  sf    -->
         <td>final value</td>
-        <td><button type="button" onclick="clear_table()">clear table</button></td>
+        <td><button type="button" id='clear-button'>clear table</button></td>
         <td id='actual'>
           <input id="t-f" type="text" value=""> <br>
           <input id="v-f" type="text" value="">
@@ -135,14 +112,17 @@
       </tr>
     </table>
   </div>
+  <hr>
+  <a href='https://github.com/janke-learning/arithmetic-coercion'>back to repo</a> <br>
+  <a href='https://janke-learning.github.io/fosdem-2019/#/open-education'>back to slideshow</a>
   <br>
   <hr>
   <hr>
   <a href="http://janke-learning.org" target="_blank"><img
       src="https://user-images.githubusercontent.com/18554853/50098409-22575780-021c-11e9-99e1-962787adaded.png"
-      width="40" height="40"></img> Janke Learning</a>
+      width="40" height="40"></img>Janke Learning</a>
 
-  <script src='./tabling/listener.js'></script>
+  <script src='./tabling/listeners.js'></script>
 </body>
 
 </html>

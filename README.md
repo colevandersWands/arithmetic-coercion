@@ -48,24 +48,16 @@ a: false, b: false    -->   ?
 ```
 
 the expansion:  
-(this works best in chrome or firefox)  
 ```js
 { const expected = ;
 
   const a = ;
   const b = ; 
-                                            const log = [];               
+                                         
   let actual; { // = (a + b) < (a - b);    
-
-    const val_1 = a + b;                    log.push({op: 'a + b',
-                                                      value: val_1,
-                                                      type: typeof val_1});
-    const val_2 = a - b;                    log.push({op:'a - b',
-                                                      value: val_2,
-                                                      type: typeof val_2});
-    const val_3 = val_1 < val_2;            log.push({op:'val_1 < val_2',
-                                                      value: val_3,
-                                                      type: typeof val_3});
+    const val_1 = a + b;                    
+    const val_2 = a - b;                   
+    const val_3 = val_1 < val_2;            
   actual = val_3; };
 
   console.log({a, b});
